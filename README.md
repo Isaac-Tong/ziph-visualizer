@@ -11,7 +11,7 @@ occurs. Based on that data, a graph is generated along with a summary on the lef
 ![Example Page](https://raw.githubusercontent.com/Isaac-Tong/ziph-visualizer/master/ss/graphandtext.png)
 
 ## Server Side Rendering
-This webpage uses expressJS along with EJS to generate the page server-side before sending it to the browser. No http requests are made client side.
+This webpage uses expressJS along with EJS to generate the page server-side before sending it to the browser. No http requests are made on the client side.
 
 ## NPM Packages Used
 * expressJS
