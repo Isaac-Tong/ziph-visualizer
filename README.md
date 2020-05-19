@@ -6,5 +6,7 @@ occurs. Based on that data, a graph is generated along with a summary on the lef
 ### Heroku
 https://ziph-visualizer.herokuapp.com/
 
-## Server side rendering
-This webpage uses expressJS along with EJS to generate the page server-side before sending it to the browser. No http requests are made client side. 
+## Server Side Rendering
+This webpage uses expressJS along with EJS to generate the page server-side before sending it to the browser. No http requests are made client side.
+
+## Example Page Generated
