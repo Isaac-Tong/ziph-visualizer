@@ -21,3 +21,4 @@ This webpage uses expressJS along with EJS to generate the page server-side befo
 * count-array-values
 * unfluff
 * body-parser
+* Chart.js
