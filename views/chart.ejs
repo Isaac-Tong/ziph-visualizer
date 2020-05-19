@@ -19,14 +19,21 @@
         padding-right: 10px;
 
         font-family: Jost;
-        font-size: 1.7rem;
+        font-size: 2.7rem;
       }
       p{
         font-family: Jost;
         color: #434344;
-        font-size: 1rem;
+        font-size: 1.25rem;
+      }
+      .dataHead{
+        font-size: 1.5rem;
       }
 
+      .dataPad{
+        padding-left: 0px;
+        padding-right: 0px;
+      }
 
     </style>
     <title></title>
@@ -46,6 +53,8 @@
               <h1>Word Freqeuency</h1>
                 <br>
                 <div class="container-flex">
+                  <br>
+
                   <div class="row">
                     <div class="col-4">
                       <p><%= text1 %></p>
@@ -114,7 +123,7 @@
                   </div>
                   <div class="row">
                     <div class="col-4">
-                      <p><%= text8 %></p>
+                      <p><%= text7 %></p>
                     </div>
                     <div class="col-4">
                       <p>&#x25b6;</p>
@@ -125,7 +134,7 @@
                   </div>
                   <div class="row">
                     <div class="col-4">
-                      <p>text8</p>
+                      <p><%= text8 %></p>
                     </div>
                     <div class="col-4">
                       <p>&#x25b6;</p>
@@ -134,7 +143,7 @@
                       <p><%= data8 %></p>
                     </div>
                   </div>
-                  <br>
+
 
                 </div>
             </div>
@@ -188,6 +197,7 @@
           xAxes:[{
             ticks: {
               fontFamily: "Jost",
+              fontSize: 18
 
             },
             gridLines:{
@@ -201,7 +211,9 @@
           yAxes:[{
             ticks: {
               fontFamily: "Jost",
+              fontSize: 18,
               beginAtZero: true
+
             },
             gridLines:{
               borderDash: [8, 4],
