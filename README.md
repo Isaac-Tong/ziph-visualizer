@@ -10,3 +10,4 @@ https://ziph-visualizer.herokuapp.com/
 This webpage uses expressJS along with EJS to generate the page server-side before sending it to the browser. No http requests are made client side.
 
 ## Example Page Generated
+![ad](https://raw.githubusercontent.com/Isaac-Tong/ziph-visualizer/master/ss/graphandtext.png)
