@@ -38,7 +38,7 @@ app.post('/', (req, res)=>{
           var i;
           for(i = 0; i < 18; i++){
             if(extractedArray[i] == undefined){
-              return res.send("Please enter more than 18")
+              return res.sendFile(__dirname + "/public/longerPage.html")
             }
           }
           res.render('chart',{
