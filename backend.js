@@ -22,13 +22,14 @@ app.post('/', (req, res)=>{
     const websiteUrl = req.body.link;
     //CHECK VALIDITY OF WEBSITE LINK
     if(validator.isURL(websiteUrl) === true){
-      //Check if http:// or https:// is appended to URL
-      var httpArray = ['']
+
 
 
       //EXTRACT DATA
       request(websiteUrl, (error, response, body)=>{
-
+          if(error){
+            return res.sendFile(__dirname + "/public/htError.html")
+          }
           var extractedObject = extractor(body, 'en').text;
           var extractedArray = toArray(extractedObject);
           var countObject = count(extractedArray);
@@ -102,6 +103,8 @@ app.post('/', (req, res)=>{
               data8: countObject[7].count,
 
 
+
+
           });
 
 
@@ -111,10 +114,11 @@ app.post('/', (req, res)=>{
 
       })
 
+
     }
 
     else{
-      console.log("this is a false URL");
+      res.sendFile(__dirname + "/public/validURL.html")
     }
 
 })
