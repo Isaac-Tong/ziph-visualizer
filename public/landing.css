@@ -24,3 +24,7 @@ p1{
   font-size: 1.2rem;
   font-family: Jost;
 }
+.note{
+  color: #F64668;
+  font-style: italic;
+}
