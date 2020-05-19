@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;500;700&display=swap" rel="stylesheet">
+    <style media="screen">
+      body{
+        background-color: #F6F7FB;
+      }
+      .round{
+        border-radius: 25px;
+        border-color: white;
+      }
+      h1{
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        font-family: Jost;
+        font-size: 1.7rem;
+      }
+      p{
+        font-family: Jost;
+        color: #434344;
+        font-size: 1rem;
+      }
+
+
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <br>
+        <br>
+
+
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-lg-3 col-md-4">
+          <div class="card round shadow-sm">
+            <div class="card-body text-center">
+              <h1>Word Freqeuency</h1>
+                <br>
+                <div class="container-flex">
+                  <div class="row">
+                    <div class="col-4">
+                      <p><%= text1 %></p>
+                    </div>
+                    <div class="col-4">
+                      <p>&#x25b6;</p>
+                    </div>
+                    <div class="col-4">
+                      <p><%= data1 %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p><%= text2 %></p>
+                    </div>
+                    <div class="col-4">
+                      <p>&#x25b6;</p>
+                    </div>
+                    <div class="col-4">
+                      <p><%= data2 %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p><%= text3 %></p>
+                    </div>
+                    <div class="col-4">
+                      <p>&#x25b6;</p>
+                    </div>
+                    <div class="col-4">
+                      <p><%= data3 %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p><%= text4 %></p>
+                    </div>
+                    <div class="col-4">
+                      <p>&#x25b6;</p>
+                    </div>
+                    <div class="col-4">
+                      <p><%= data4 %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p><%= text5 %></p>
+                    </div>
+                    <div class="col-4">
+                      <p>&#x25b6;</p>
+                    </div>
+                    <div class="col-4">
+                      <p><%= data5 %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p><%= text6 %></p>
+                    </div>
+                    <div class="col-4">
+                      <p>&#x25b6;</p>
+                    </div>
+                    <div class="col-4">
+                      <p><%= data6 %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p><%= text8 %></p>
+                    </div>
+                    <div class="col-4">
+                      <p>&#x25b6;</p>
+                    </div>
+                    <div class="col-4">
+                      <p><%= data7 %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p>text8</p>
+                    </div>
+                    <div class="col-4">
+                      <p>&#x25b6;</p>
+                    </div>
+                    <div class="col-4">
+                      <p><%= data8 %></p>
+                    </div>
+                  </div>
+                  <br>
+
+                </div>
+            </div>
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-8 canvascol">
+            <div class="card round shadow-sm">
+              <div class="card-body">
+                <canvas class="chartPad"id="displayData"></canvas>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+
+  var ctx = document.getElementById('displayData').getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+
+      // The data for our dataset
+      data: {
+          labels: ['<%= one %>', '<%= two %>', '<%= three %>', '<%= four %>', '<%= five %>', '<%= six %>', '<%= seven %>', '<%= eight %>', '<%= nine %>', '<%= ten %>', '<%= eleven %>', '<%= twelve %>', '<%= thirteen %>', '<%= fourteen %>', '<%= fifteen %>', '<%= sixteen %>', '<%= seventeen %>', '<%= eighteen %>'],
+          datasets: [{
+              data: [<%= oneData %>, <%= twoData %>, <%= threeData %>, <%= fourData %>, <%= fiveData %>, <%= sixData %>, <%= sevenData %>, <%= eightData %>, <%= nineData %>, <%= tenData %>, <%= elevenData %>, <%= twelveData %>, <%= thirteenData %>, <%= fourteenData %>, <%= fifteenData %>, <%= sixteenData %>, <%= seventeenData %>, <%= eighteenData %>],
+              backgroundColor: "rgb(52,206,154, 0.6)",
+              borderColor: "rgb(79,218,159, 0.8)",
+              borderWidth: 5,
+              hoverBorderColor: "rgb(0,144,158)"
+
+
+          }],
+
+
+      },
+
+      // Configuration options go here
+      options: {
+        legend: {
+          display: false,
+          },
+        tooltips: {
+          enabled: false
+        },
+        scales:{
+          xAxes:[{
+            ticks: {
+              fontFamily: "Jost",
+
+            },
+            gridLines:{
+              borderDash: [8, 4],
+              color:"rgb(158,158,158, 0.7)",
+              zeroLineColor:"rgb(158,158,158, 0.7)"
+            }
+
+          }],
+
+          yAxes:[{
+            ticks: {
+              fontFamily: "Jost",
+              beginAtZero: true
+            },
+            gridLines:{
+              borderDash: [8, 4],
+              color: "rgb(158,158,158, 0.7)",
+              zeroLineColor:"rgb(158,158,158, 0.7)",
+            }
+          }],
+        }
+      }
+  });
+  </script>
+</html>
