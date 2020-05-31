@@ -2,6 +2,7 @@
 ### Visit the Website
 
 https://ziph-visualizer.herokuapp.com/
+*Website might take as long as 10s to load since it is hosted on a free heroku page*
 
 ## Usage
 Ziph's visualizer takes in a URL and extracts the main body content of the website. It then counts how many times a word in the webpage
