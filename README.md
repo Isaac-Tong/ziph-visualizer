@@ -1,7 +1,7 @@
 # ziph-visualizer
 ### Visit the Website
 
-https://ziph-visualizer.herokuapp.com/
+https://ziph-visualizer.herokuapp.com/  
 *Website might take as long as 10s to load since it is hosted on a free heroku page*
 
 ## Usage
